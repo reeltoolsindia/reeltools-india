@@ -4,7 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ReelTools India - Free Instagram Creator Tools</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f0f0f; color: #ffffff; line-height: 1.5; padding-bottom: 40px; }
+    header { text-align: center; padding: 40px 20px 30px; background: linear-gradient(135deg, #ff0050, #ff4d6d); }
+    header h1 { font-size: 28px; margin-bottom: 8px; }
+    header p { font-size: 15px; opacity: 0.9; }
+    .tools-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 20px 15px; max-width: 500px; margin: 0 auto; }
+    .tool-card { background: #1c1c1c; border-radius: 16px; padding: 20px 12px; text-align: center; text-decoration: none; color: white; border: 1px solid #333; }
+    .tool-card span { font-size: 28px; display: block; margin-bottom: 8px; }
+    .tool-card h3 { font-size: 14px; margin-bottom: 4px; }
+    .tool-card p { font-size: 12px; color: #aaa; }
+    .tool-section { max-width: 500px; margin: 30px auto; padding: 0 15px; }
+    .tool-section h2 { font-size: 20px; margin-bottom: 15px; color: #ff4d6d; }
+    .tool-section input { width: 100%; padding: 14px; border-radius: 12px; border: none; background: #1c1c1c; color: white; font-size: 15px; margin-bottom: 12px; outline: none; }
+    .tool-section button { width: 100%; padding: 14px; border-radius: 12px; border: none; background: linear-gradient(135deg, #ff0050, #ff4d6d); color: white; font-size: 16px; font-weight: 600; }
+    .result { margin-top: 20px; background: #1c1c1c; border-radius: 12px; padding: 15px; font-size: 14px; line-height: 1.6; white-space: pre-wrap; display: none; }
+    footer { text-align: center; padding: 30px 20px; color: #888; font-size: 13px; }
+  </style>
 </head>
 <body>
   <header>
@@ -14,52 +31,21 @@
 
   <main>
     <div class="tools-grid">
-      <a href="#hook" class="tool-card">
-        <span>🎬</span>
-        <h3>Reel Hook Generator</h3>
-        <p>Viral hooks in seconds</p>
-      </a>
-
-      <a href="#caption" class="tool-card">
-        <span></span>
-        <h3>Caption Generator</h3>
-        <p>Engaging captions</p>
-      </a>
-
-      <a href="#hashtag" class="tool-card">
-        <span>#</span>
-        <h3>Hashtag Generator</h3>
-        <p>Trending hashtags</p>
-      </a>
-
-      <a href="#bio" class="tool-card">
-        <span></span>
-        <h3>Bio Generator</h3>
-        <p>Perfect Instagram bio</p>
-      </a>
-
-      <a href="#script" class="tool-card">
-        <span></span>
-        <h3>Reel Script Generator</h3>
-        <p>Ready-to-shoot scripts</p>
-      </a>
-
-      <a href="#ideas" class="tool-card">
-        <span></span>
-        <h3>Content Ideas</h3>
-        <p>Never run out of ideas</p>
-      </a>
+      <a href="#hook" class="tool-card"><span>🎬</span><h3>Reel Hook Generator</h3><p>Viral hooks in seconds</p></a>
+      <a href="#caption" class="tool-card"><span></span><h3>Caption Generator</h3><p>Engaging captions</p></a>
+      <a href="#hashtag" class="tool-card"><span>#</span><h3>Hashtag Generator</h3><p>Trending hashtags</p></a>
+      <a href="#bio" class="tool-card"><span></span><h3>Bio Generator</h3><p>Perfect Instagram bio</p></a>
+      <a href="#script" class="tool-card"><span></span><h3>Reel Script Generator</h3><p>Ready-to-shoot scripts</p></a>
+      <a href="#ideas" class="tool-card"><span></span><h3>Content Ideas</h3><p>Never run out of ideas</p></a>
     </div>
 
-    <!-- Hook Generator -->
     <section id="hook" class="tool-section">
       <h2>Reel Hook Generator</h2>
-      <input type="text" id="hookTopic" placeholder="Apna topic likho (e.g. money, fitness, fashion)">
+      <input type="text" id="hookTopic" placeholder="Apna topic likho (e.g. money, fitness)">
       <button onclick="generateHooks()">Generate Hooks</button>
       <div id="hookResult" class="result"></div>
     </section>
 
-    <!-- Caption Generator -->
     <section id="caption" class="tool-section">
       <h2>Caption Generator</h2>
       <input type="text" id="captionTopic" placeholder="Topic ya niche likho">
@@ -67,7 +53,6 @@
       <div id="captionResult" class="result"></div>
     </section>
 
-    <!-- Hashtag Generator -->
     <section id="hashtag" class="tool-section">
       <h2>Hashtag Generator</h2>
       <input type="text" id="hashtagTopic" placeholder="Topic likho">
@@ -75,15 +60,13 @@
       <div id="hashtagResult" class="result"></div>
     </section>
 
-    <!-- Bio Generator -->
     <section id="bio" class="tool-section">
       <h2>Instagram Bio Generator</h2>
-      <input type="text" id="bioNiche" placeholder="Apni niche likho (e.g. fitness coach)">
+      <input type="text" id="bioNiche" placeholder="Apni niche likho">
       <button onclick="generateBio()">Generate Bio</button>
       <div id="bioResult" class="result"></div>
     </section>
 
-    <!-- Script Generator -->
     <section id="script" class="tool-section">
       <h2>Reel Script Generator</h2>
       <input type="text" id="scriptTopic" placeholder="Reel ka topic">
@@ -91,7 +74,6 @@
       <div id="scriptResult" class="result"></div>
     </section>
 
-    <!-- Content Ideas -->
     <section id="ideas" class="tool-section">
       <h2>Content Ideas Generator</h2>
       <input type="text" id="ideasNiche" placeholder="Apni niche">
@@ -104,6 +86,78 @@
     <p>Made with  for Indian Creators | Free Forever</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    function generateHooks() {
+      var topic = document.getElementById('hookTopic').value.trim() || 'ye topic';
+      var hooks = [
+        "Agar tum " + topic + " se related ho to ye video skip mat karna...",
+        "Main " + topic + " mein 30 din mein ye result laaya — bina kisi paid course ke",
+        topic + " wale log ye galti karte hain...",
+        "Ye 1 cheez " + topic + " mein sabse zyada important hai",
+        "Log kehte hain " + topic + " mushkil hai, lekin...",
+        "Agar tumhara goal " + topic + " hai to ye try karo",
+        "Mainne " + topic + " mein ye galti ki thi, ab mat karna",
+        topic + " se related ye secret almost koi nahi batata",
+        "Bas 15 second mein " + topic + " ka best tip",
+        "Ye dekhne ke baad tum " + topic + " differently sochoge"
+      ];
+      showResult('hookResult', hooks.join('\n\n'));
+    }
+
+    function generateCaptions() {
+      var topic = document.getElementById('captionTopic').value.trim() || 'ye topic';
+      var captions = [
+        "Kabhi kabhi sirf shuruat karna hi kaafi hota hai.\n\n" + topic + " journey start karo aaj se.",
+        "Consistency > Motivation\n\nRoz thoda sa better banne ki koshish karo.\n\n" + topic + " mein progress dikhega.",
+        "Ye post unke liye hai jo " + topic + " mein serious hain.\n\nSave kar lo.",
+        "Small steps every day.\n\n" + topic + " mastery aise hi aati hai.",
+        "Don't wait for perfect moment.\n\nStart with what you have — " + topic
+      ];
+      showResult('captionResult', captions.join('\n\n--------------------\n\n'));
+    }
+
+    function generateHashtags() {
+      var topic = document.getElementById('hashtagTopic').value.trim().toLowerCase() || 'instagram';
+      var tags = ["#" + topic, "#" + topic + "tips", "#" + topic + "reels", "#" + topic + "india", "#reelsinstagram", "#explorepage", "#viralreels", "#contentcreator", "#indiancreators", "#growth"];
+      showResult('hashtagResult', tags.join(' '));
+    }
+
+    function generateBio() {
+      var niche = document.getElementById('bioNiche').value.trim() || 'Creator';
+      var bios = [
+        niche + " | Helping you grow \nDaily tips & free tools\n Link in bio",
+        "Building in public | " + niche + "\nSharing what works\n Free tools ↓",
+        niche + " Content Creator\nHelping creators grow\n Free tools in bio"
+      ];
+      showResult('bioResult', bios.join('\n\n--------------------\n\n'));
+    }
+
+    function generateScript() {
+      var topic = document.getElementById('scriptTopic').value.trim() || 'ye topic';
+      var script = "Hook (0-3 sec):\nAgar tum " + topic + " se struggle kar rahe ho to ye dekh lo...\n\nProblem:\nSab kehte hain ye karo lekin practical nahi batate.\n\nSolution:\nMainne ye 3 steps follow kiye...\n\nCTA:\nFollow + Save kar lo. Link bio mein free tools hain.";
+      showResult('scriptResult', script);
+    }
+
+    function generateIdeas() {
+      var niche = document.getElementById('ideasNiche').value.trim() || 'your niche';
+      var ideas = [
+        "1. " + niche + " mein common myths bust karo",
+        "2. Day in my life as a " + niche,
+        "3. 5 tools jo " + niche + " creators use karte hain",
+        "4. Before vs After transformation",
+        "5. " + niche + " related Q&A reel",
+        "6. Things I wish I knew earlier about " + niche,
+        "7. Free vs Paid resources",
+        "8. Weekly " + niche + " tips series"
+      ];
+      showResult('ideasResult', ideas.join('\n'));
+    }
+
+    function showResult(id, text) {
+      var el = document.getElementById(id);
+      el.innerText = text;
+      el.style.display = 'block';
+    }
+  </script>
 </body>
 </html>
