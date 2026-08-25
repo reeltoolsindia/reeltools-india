@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReelTools India - Free Instagram Creator Tools</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>ReelTools India</h1>
+    <p>Free tools for Instagram Creators</p>
+  </header>
+
+  <main>
+    <div class="tools-grid">
+      <a href="#hook" class="tool-card">
+        <span>🎬</span>
+        <h3>Reel Hook Generator</h3>
+        <p>Viral hooks in seconds</p>
+      </a>
+
+      <a href="#caption" class="tool-card">
+        <span></span>
+        <h3>Caption Generator</h3>
+        <p>Engaging captions</p>
+      </a>
+
+      <a href="#hashtag" class="tool-card">
+        <span>#</span>
+        <h3>Hashtag Generator</h3>
+        <p>Trending hashtags</p>
+      </a>
+
+      <a href="#bio" class="tool-card">
+        <span></span>
+        <h3>Bio Generator</h3>
+        <p>Perfect Instagram bio</p>
+      </a>
+
+      <a href="#script" class="tool-card">
+        <span></span>
+        <h3>Reel Script Generator</h3>
+        <p>Ready-to-shoot scripts</p>
+      </a>
+
+      <a href="#ideas" class="tool-card">
+        <span></span>
+        <h3>Content Ideas</h3>
+        <p>Never run out of ideas</p>
+      </a>
+    </div>
+
+    <!-- Hook Generator -->
+    <section id="hook" class="tool-section">
+      <h2>Reel Hook Generator</h2>
+      <input type="text" id="hookTopic" placeholder="Apna topic likho (e.g. money, fitness, fashion)">
+      <button onclick="generateHooks()">Generate Hooks</button>
+      <div id="hookResult" class="result"></div>
+    </section>
+
+    <!-- Caption Generator -->
+    <section id="caption" class="tool-section">
+      <h2>Caption Generator</h2>
+      <input type="text" id="captionTopic" placeholder="Topic ya niche likho">
+      <button onclick="generateCaptions()">Generate Captions</button>
+      <div id="captionResult" class="result"></div>
+    </section>
+
+    <!-- Hashtag Generator -->
+    <section id="hashtag" class="tool-section">
+      <h2>Hashtag Generator</h2>
+      <input type="text" id="hashtagTopic" placeholder="Topic likho">
+      <button onclick="generateHashtags()">Generate Hashtags</button>
+      <div id="hashtagResult" class="result"></div>
+    </section>
+
+    <!-- Bio Generator -->
+    <section id="bio" class="tool-section">
+      <h2>Instagram Bio Generator</h2>
+      <input type="text" id="bioNiche" placeholder="Apni niche likho (e.g. fitness coach)">
+      <button onclick="generateBio()">Generate Bio</button>
+      <div id="bioResult" class="result"></div>
+    </section>
+
+    <!-- Script Generator -->
+    <section id="script" class="tool-section">
+      <h2>Reel Script Generator</h2>
+      <input type="text" id="scriptTopic" placeholder="Reel ka topic">
+      <button onclick="generateScript()">Generate Script</button>
+      <div id="scriptResult" class="result"></div>
+    </section>
+
+    <!-- Content Ideas -->
+    <section id="ideas" class="tool-section">
+      <h2>Content Ideas Generator</h2>
+      <input type="text" id="ideasNiche" placeholder="Apni niche">
+      <button onclick="generateIdeas()">Generate Ideas</button>
+      <div id="ideasResult" class="result"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with  for Indian Creators | Free Forever</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
